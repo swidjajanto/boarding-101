@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Boarding 101</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boarding 101</title>
   <style>
     * {
       margin: 0;
@@ -22,28 +21,33 @@
       justify-content: center;
       align-items: center;
       position: relative;
+      text-align: center;
+      padding: 1rem;
     }
 
     .airplane {
       position: absolute;
       top: 50%;
       left: -100px;
-      font-size: 250pt;
+      font-size: 20vw;
       transform: translateY(-50%);
       animation: fly 2s ease-in-out forwards;
       z-index: 2;
     }
 
     @keyframes fly {
-      0%   { left: -100px; }
+      0% { left: -100px; }
       100% { left: 100%; }
     }
 
     .title {
-      font-size: 150pt;
+      font-size: 12vw;
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       position: relative;
       z-index: 1;
+      cursor: pointer;
     }
 
     .title span {
@@ -80,6 +84,7 @@
       opacity: 0;
       transition: opacity 0.5s ease, visibility 0.5s ease;
       z-index: 999;
+      padding: 1rem;
     }
 
     .popup-overlay.show {
@@ -88,45 +93,59 @@
     }
 
     .popup-box {
-        position: relative;
+      position: relative;
       background: #fffaf5;
       border: 2px solid rgb(242, 180, 9);
       border-radius: 10px;
-      padding: 40px 30px;
-      max-width: 500px;
+      padding: 2rem;
+      max-width: 90vw;
       text-align: center;
       box-shadow: 0 8px 20px rgba(0,0,0,0.2);
       font-family: Georgia, serif;
     }
 
     .popup-box p {
-      font-size: 18px;
+      font-size: 1rem;
       line-height: 1.5;
       color: rgb(242, 180, 9);
     }
 
     .popup-close {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 26px;
-    font-weight: bold;
-    color: rgb(242, 180, 9);
-    cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 16px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: rgb(242, 180, 9);
+      cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+      .title {
+        font-size: 10vw;
+      }
+
+      .popup-box {
+        max-width: 500px;
+        padding: 2.5rem;
+      }
+
+      .popup-box p {
+        font-size: 1.1rem;
+      }
     }
   </style>
 </head>
 <body>
 
-    <div class="popup-overlay" id="popup">
-        <div class="popup-box">
-          <div class="popup-close" id="closePopup">&times;</div>
-          <p>
-            A website designed to support international students
-            through stories and experiences from fellow students studying abroad.
-          </p>
-        </div>
-      </div>
+  <div class="popup-overlay" id="popup">
+    <div class="popup-box">
+      <div class="popup-close" id="closePopup">&times;</div>
+      <p>
+        A website designed to support international students through stories and experiences from fellow students studying abroad.
+      </p>
+    </div>
+  </div>
 
   <div class="airplane">✈︎</div>
 
