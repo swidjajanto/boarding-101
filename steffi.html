@@ -23,11 +23,13 @@
     header {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       padding: 1rem 2rem;
       font-family: 'Playfair Display', serif;
       font-size: 1.3rem;
       color: #7a5f3e;
       letter-spacing: 0.05em;
+      background-color: #fefcf9;
     }
 
     .book {
@@ -119,6 +121,13 @@
     }
 
     @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        font-size: 1rem;
+        gap: 0.5rem;
+      }
+
       .book {
         grid-template-columns: 1fr;
         max-width: 95vw;
@@ -133,7 +142,8 @@
       .book-contents {
         padding: 1.5rem;
         aspect-ratio: auto;
-        max-height: 80vh;
+        height: auto;
+        max-height: none;
       }
 
       h2 {
@@ -152,8 +162,8 @@
 </head>
 <body>
   <header>
-    <div onclick="location.href='directory.html'">ARRIVAL</div>
-    <div onclick="location.href='departure.html'">DEPARTURE</div>
+    <div onclick="location.href='directory.html'" style="cursor:pointer;">ARRIVAL</div>
+    <div onclick="location.href='departure.html'" style="cursor:pointer;">DEPARTURE</div>
   </header>
 
   <details class="book">
@@ -180,13 +190,13 @@
       </ul>
 
       <h3>Most Helpful Resources</h3>
-      <p>The ISS office has been great for CPT and OPT work authorization stuff. Its online through Parsons website.It's important because I dont want to get deported – its a lot of paperwork and it helps because they send emails and checklists.</p>
+      <p>The ISS office has been great for CPT and OPT work authorization stuff. It's online through Parsons' website. It's important because I don’t want to get deported — it’s a lot of paperwork and it helps because they send emails and checklists.</p>
 
       <h3>Biggest Challenge Adjusting Your New Life</h3>
-      <p>The biggest challenge was finding an apartment – as an international kid, not every place allows international students.</p>
+      <p>The biggest challenge was finding an apartment — as an international student, not every place accepts us.</p>
 
       <h3>Advice For Other International Students</h3>
-      <p>Ask for help! From anyone that you know – theres lots of cultural differences, sometimes the way to figures things out here are different from back home.</p>
+      <p>Ask for help! From anyone that you know — there are lots of cultural differences, and sometimes the way to figure things out here is different from back home.</p>
     </div>
   </details>
 </body>
