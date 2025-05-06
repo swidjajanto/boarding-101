@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boarding 101</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fff;
+      color: #111;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 80px;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .passport {
+      background-color: #ece8e1;
+      height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .passport:hover {
+      background-color: #e0d8ce;
+      transform: scale(1.03);
+    }
+
+    .label {
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #333;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .label {
+        font-size: 1.5rem;
+      }
+
+      .passport {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div onclick="location.href='departure.html'">
+  <h1>Arrivals</h1>
+  </div>
+  <div class="grid">
+    <div class="passport"><div class="label" onclick="location.href='steffi.html'">Indonesia</div></div>
+    <div class="passport"><div class="label" onclick="location.href='kavya.html'">Belgium</div></div>
+    <div class="passport"><div class="label" onclick="location.href='fiona.html'">Taiwan</div></div>
+    <div class="passport"><div class="label" onclick="location.href='james.html'">Indonesia</div></div>
+    <div class="passport"><div class="label" onclick="location.href='trishikha.html'">India</div></div>
+    <div class="passport"><div class="label" onclick="location.href='steffi.html'">Thailand</div></div>
+    <div class="passport"><div class="label" onclick="location.href='monika.html'">Indonesia</div></div>
+    <div class="passport"><div class="label" onclick="location.href='steffi.html'">Korea</div></div>
+  </div>
+</body>
+</html>

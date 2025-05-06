@@ -1,0 +1,49 @@
+html {
+    background: black;
+    color: rgb(242, 180, 9);
+    font-family: sans-serif;
+  }
+  
+  .board {
+    display: grid;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+  
+  .board-header {
+    background: rgb(75,75,75);
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    font-size: 70pt;
+    padding: 4rem 1rem 4rem;
+  }
+  
+  .destination {
+    display: flex;
+    gap: 0.75rem;
+  }
+  
+  .letter {
+    background: rgb(75,75,75);
+    width: 2rem;
+    height: 3rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50pt;
+    padding: 2rem;
+  }
+  
+  .gap {
+    background: rgb(40,40,40);
+    width: 2rem;
+    height: 3rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50pt;
+    padding: 2rem;
+  }
+
+  

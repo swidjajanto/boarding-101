@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boarding 101</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fefcf9;
+      color: #2a2a2a;
+    }
+
+    header {
+      background: #755f52;
+      color: #fefcf9;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .title-section {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .title-section h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem;
+      color: #7a5f3e;
+      letter-spacing: 0.1em;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .passport {
+      background-color: #ece8e1;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .passport:hover {
+      background-color: #e0d8ce;
+      transform: scale(1.03);
+    }
+
+    .label {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: #333;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 1rem;
+      padding: 2rem;
+      color: #aaa;
+    }
+
+    @media (max-width: 768px) {
+      .title-section h1 {
+        font-size: 2.5rem;
+      }
+      header {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div onclick="location.href='index.html'">ARRIVALS</div>
+    <div onclick="location.href='departure.html'">DEPARTURES</div>
+  </header>
+
+  <div class="title-section">
+    <h1>Boarding 101</h1>
+    <p>A collective of stories from international students abroad</p>
+  </div>
+
+  <div class="grid">
+    <div class="passport" onclick="location.href='steffi.html'"><div class="label">Indonesia</div></div>
+    <div class="passport" onclick="location.href='kavya.html'"><div class="label">Belgium</div></div>
+    <div class="passport" onclick="location.href='fiona.html'"><div class="label">Taiwan</div></div>
+    <div class="passport" onclick="location.href='james.html'"><div class="label">Indonesia</div></div>
+    <div class="passport"><div class="label">India</div></div>
+    <div class="passport"><div class="label">Thailand</div></div>
+    <div class="passport"><div class="label">Indonesia</div></div>
+    <div class="passport"><div class="label">Korea</div></div>
+  </div>
+
+  <footer>
+    &copy; 2025 Boarding 101. All rights reserved.
+  </footer>
+</body>
+</html>
