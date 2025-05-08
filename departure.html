@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
-
 </head>
 <body>
 
@@ -19,34 +18,33 @@
     </div>
     <div class="destination" onclick="location.href='directory.html'">
       <span class="letter">U</span>
+      <span class="letter">N</span>
+      <span class="letter">I</span>
+      <span class="letter">T</span>
+      <span class="letter">E</span>
+      <span class="letter">D</span>
+      <span class="letter">S</span>
+      <span class="letter">T</span>
+      <span class="letter">A</span>
+      <span class="letter">T</span>
+      <span class="letter">E</span>
       <span class="letter">S</span>
       <span class="gap"></span>
-      <span class="gap"></span>
-      <span class="gap"></span>
-      <span class="gap"></span>
-      <span class="gap"></span>
-      <span class="gap"></span>
-      <span class="gap"></span>
-      <span class="gap"></span>
-      <span class="gap"></span>
-      <span class="gap"></span>
-      <span class="gap"></span>
-
     </div>
     <div class="destination" onclick="location.href='empty-directory.html'">
       <span class="letter">U</span>
+      <span class="letter">N</span>
+      <span class="letter">I</span>
+      <span class="letter">T</span>
+      <span class="letter">E</span>
+      <span class="letter">D</span>
       <span class="letter">K</span>
-      <span class="gap"></span>
-      <span class="gap"></span>
-      <span class="gap"></span>
-      <span class="gap"></span>
-      <span class="gap"></span>
-      <span class="gap"></span>
-      <span class="gap"></span>
-      <span class="gap"></span>
-      <span class="gap"></span>
-      <span class="gap"></span>
-      <span class="gap"></span>
+      <span class="letter">I</span>
+      <span class="letter">N</span>
+      <span class="letter">G</span>
+      <span class="letter">D</span>
+      <span class="letter">O</span>
+      <span class="letter">M</span>
     </div>
     <div class="destination" onclick="location.href='empty-directory.html'">
       <span class="letter">A</span>
@@ -64,36 +62,67 @@
       <span class="gap"></span>
     </div>
     <div class="destination" onclick="location.href='empty-directory.html'">
-        <span class="letter">D</span>
-        <span class="letter">E</span>
-        <span class="letter">N</span>
-        <span class="letter">M</span>
-        <span class="letter">A</span>
-        <span class="letter">R</span>
-        <span class="letter">K</span>
-        <span class="gap"></span>
-        <span class="gap"></span>
-        <span class="gap"></span>
-        <span class="gap"></span>
-        <span class="gap"></span>
-        <span class="gap"></span>
-      </div>
-      <div class="destination">
-        <span class="gap"></span>
-        <span class="gap"></span>
-        <span class="gap"></span>
-        <span class="gap"></span>
-        <span class="gap"></span>
-        <span class="gap"></span>
-        <span class="gap"></span>
-        <span class="gap"></span>
-        <span class="gap"></span>
-        <span class="gap"></span>
-        <span class="gap"></span>
-        <span class="gap"></span>
-        <span class="gap"></span>
-      </div>
+      <span class="letter">D</span>
+      <span class="letter">E</span>
+      <span class="letter">N</span>
+      <span class="letter">M</span>
+      <span class="letter">A</span>
+      <span class="letter">R</span>
+      <span class="letter">K</span>
+      <span class="gap"></span>
+      <span class="gap"></span>
+      <span class="gap"></span>
+      <span class="gap"></span>
+      <span class="gap"></span>
+      <span class="gap"></span>
+    </div>
+    <div class="destination" onclick="location.href='empty-directory.html'">
+      <span class="letter">K</span>
+      <span class="letter">O</span>
+      <span class="letter">R</span>
+      <span class="letter">E</span>
+      <span class="letter">A</span>
+      <span class="gap"></span>
+      <span class="gap"></span>
+      <span class="gap"></span>
+      <span class="gap"></span>
+      <span class="gap"></span>
+      <span class="gap"></span>
+      <span class="gap"></span>
+      <span class="gap"></span>
+    </div>
   </div>
+
+  <script>
+    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const flips = 15;
+    const delay = 60;
+  
+    function animateFlips() {
+      document.querySelectorAll('.letter').forEach((span, i) => {
+        const finalChar = span.getAttribute('data-final') || span.textContent.trim().toUpperCase();
+        span.setAttribute('data-final', finalChar); // Save original letter
+  
+        let count = 0;
+        const interval = setInterval(() => {
+          span.textContent = characters[Math.floor(Math.random() * characters.length)];
+          count++;
+  
+          if (count >= flips + i) {
+            clearInterval(interval);
+            span.textContent = finalChar;
+          }
+        }, delay);
+      });
+    }
+  
+    // Run once on load
+    animateFlips();
+  
+    // Then repeat every 6 seconds
+    setInterval(animateFlips, 6000);
+  </script>
+  
 
 </body>
 </html>
