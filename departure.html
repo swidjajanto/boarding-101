@@ -101,7 +101,7 @@
     function animateFlips() {
       document.querySelectorAll('.letter').forEach((span, i) => {
         const finalChar = span.getAttribute('data-final') || span.textContent.trim().toUpperCase();
-        span.setAttribute('data-final', finalChar); // Save original letter
+        span.setAttribute('data-final', finalChar);
   
         let count = 0;
         const interval = setInterval(() => {
@@ -116,10 +116,8 @@
       });
     }
   
-    // Run once on load
     animateFlips();
   
-    // Then repeat every 6 seconds
     setInterval(animateFlips, 6000);
   </script>
   
